@@ -24,16 +24,13 @@
     <input type="checkbox" name="merveilleux" value="merveilleux">Merveilleux vaisceaux</input>
   </div>
 
-  <div>
-    Caractéristiques :
-    <input type="checkbox" name="plein" value="plein">plein</input>
-    <input type="checkbox" name="chaud" value="chaud">chaud</input>
-    <input type="checkbox" name="vide" value="vide">vide</input>
-    <input type="checkbox" name="froid" value="froid">froid</input>
-    <input type="checkbox" name="interne" value="interne">interne</input>
-    <input type="checkbox" name="externe" value="externe">interne</input>
-  </div>
-
+  <div><select>
+    <option value="">Volvo</option>
+    <option value="">Saab</option>
+    <option value="">Mercedes</option>
+    <option value="">Audi</option>
+  </select>
+</div>
   <input type="submit" value="Rechercher">
 
 </form>
