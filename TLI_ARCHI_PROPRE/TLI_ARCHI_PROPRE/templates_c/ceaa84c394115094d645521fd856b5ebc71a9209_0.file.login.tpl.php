@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-16 18:17:52
+/* Smarty version 3.1.33, created on 2019-10-17 14:15:05
   from 'C:\wamp64\www\TLI_ARCHI_PROPRE\TLI_ARCHI_PROPRE\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da75ed0e88831_34778054',
+  'unifunc' => 'content_5da877694885d7_07056460',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ceaa84c394115094d645521fd856b5ebc71a9209' => 
     array (
       0 => 'C:\\wamp64\\www\\TLI_ARCHI_PROPRE\\TLI_ARCHI_PROPRE\\templates\\login.tpl',
-      1 => 1571066543,
+      1 => 1571321702,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_5da75ed0e88831_34778054 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da877694885d7_07056460 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="form">
@@ -36,9 +36,16 @@ $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_sm
 
 	  <p>Pas encore inscrit ? <a href="?action=register"><u>Cliquez ici !</u></a></p>
     </form>
+	<?php if ((!empty($_smarty_tpl->tpl_vars['errorMessage']->value))) {?>
+		<div id="error_message">
+		    <?php echo $_smarty_tpl->tpl_vars['errorMessage']->value;?>
+
+		</div>
+		<?php }?>
+
+
   </div>
-
-
+  
 
 
 

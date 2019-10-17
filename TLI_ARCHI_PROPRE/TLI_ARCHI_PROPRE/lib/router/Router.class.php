@@ -44,7 +44,7 @@ class Router
 
 		if(	$this->action == "AddUser")
 		{
-			 ControleurRegister::register();
+			 $error=ControleurRegister::register();
 		}
 		if(	$this->action == "logout")
 		{

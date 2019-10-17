@@ -1,6 +1,5 @@
 <?php
 
-require_once('Models/User.php');
 class ControleurLogin
 {
     public static Function login()
@@ -11,7 +10,7 @@ class ControleurLogin
       $_SESSION['user']=$user;
       if(isset($_SESSION['user']))
       {
-        header("Location: /");        
+        header("Location:index.php");        
       }
       else
       {
@@ -20,10 +19,9 @@ class ControleurLogin
     }
     public static Function logout()
       {
-        session_start();
   			session_unset();
   			session_destroy();
-  			header("Location: /");
+  			header("Location:index.php");
       }
   }
 
