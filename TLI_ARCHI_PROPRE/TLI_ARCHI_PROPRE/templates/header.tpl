@@ -19,10 +19,13 @@
 			{if (empty($UtilisateurConnecte))}
 	  	<li> <a href="?action=login">Connexion</a></li>
 			{else}
-			 <label id="hello">Bonjour {$UtilisateurConnecte->nom}</label>
 			<li> <a href="?action=logout">Deconnexion</a></li>
 			{/if}
     </ul>
-		
+		{if (!empty($errorMessage))}
+		<div id="error_message">
+		    {$errorMessage}
+		</div>
+		{/if}
 
 </nav>

@@ -9,6 +9,7 @@
 require ('lib/checkers/checkers.php');
 require_once ('Controleurs/ControleurRegister.php');
 require_once ('Controleurs/ControleurLogin.php');
+require_once('Controleurs/ControleurRecherche.php');
 
 class Router
 {
@@ -44,7 +45,7 @@ class Router
 
 		if(	$this->action == "AddUser")
 		{
-			 $error=ControleurRegister::register();
+			 ControleurRegister::register();
 		}
 		if(	$this->action == "logout")
 		{
@@ -53,6 +54,14 @@ class Router
 		if(	$this->action == "logUser")
 		{
 			$error=ControleurLogin::login();
+		}
+		if($this->action == "pathologies")
+		{
+			$this->smarty->assign("meridiens",ControleurRecherche::affichMeridienController());
+			$this->smarty->assign("typePatho",ControleurRecherche::affichTypePathoController());
+			$this->smarty->assign("caracteristique",ControleurRecherche::affichCaractController());
+			$this->smarty->assign("recherche",ControleurRecherche::resultatRecherche());
+
 		}
 		$this->smarty->assign("UtilisateurConnecte",isset($_SESSION['user'])?$_SESSION['user']:null);
 		$this->smarty->assign("errorMessage",$error);

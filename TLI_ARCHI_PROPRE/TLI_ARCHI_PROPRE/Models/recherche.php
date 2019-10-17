@@ -1,22 +1,54 @@
 <?php
 require_once('lib/bd/database.php');
+class recherche
+{
+    private $meridien;
+    private $TypePatho;
+    private $Caracteristique;
+    private $resultatRecherche;
 
-$maBDPatho = new BD();
-$resultat = $maBDPatho->requete('SELECT * from patho');
+    function __contruct($meridien, $TypePatho, $Caracteristique)
+    {
+        $this->$meridien = $meridien;
+        $this->$TypePatho = $TypePatho;
+        $this->$Caracteristique = $Caracteristique;
+    }
+  
 
-while($donnees = $resultat->fetch())
-            {
-            
-                $pathologie = new patho($donnees['idP'], $donnees['type'], $donnees['desc']);
-                $pathos[$donnees['idP']] = $pathologie;
-                
-                
-                
-            }
+    public static function affichageMeridien()
+    {
+        $listMeridien = new BD();
+        $meridiens = $listMeridien->requete('SELECT Nom from Meridien');
+        return $meridiens;
+    }
+    
+    public static function affichageTypePatho()
+    {
+        $typePatho = new BD();
+        $listTypePatho = $typePatho->requete('SELECT Nom from Meridien');
+        return $listTypePatho;
+    }
+    public static function caracteristiquePatho()
+    {
+        $caractPatho = new BD();
+        $listCaractPatho = $caractPatho->requete('SELECT Nom from Meridien');
+        return $listCaractPatho;
+    }
+    function recupererPatho()
+    {
+        $listPatho = new BD();
+        $this->$resultatRecherche = $listPatho->requete('SELECT * from patho');
 
-            $resultat->closeCursor();
-            $dbh = null;
+    }
+    function getResultatRecherche()
+    {
+        return $this->$resultatRecherche;
+    }
+    
 
+
+
+}
 
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-17 14:06:47
+/* Smarty version 3.1.33, created on 2019-10-16 18:17:50
   from 'C:\wamp64\www\TLI_ARCHI_PROPRE\TLI_ARCHI_PROPRE\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5da87577f2e074_15323646',
+  'unifunc' => 'content_5da75ecee83b50_87188582',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a11e4188334e5db67da0d83286a2ab09aa1a186e' => 
     array (
       0 => 'C:\\wamp64\\www\\TLI_ARCHI_PROPRE\\TLI_ARCHI_PROPRE\\templates\\header.tpl',
-      1 => 1571321204,
+      1 => 1571249368,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5da87577f2e074_15323646 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5da75ecee83b50_87188582 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -42,8 +42,6 @@ function content_5da87577f2e074_15323646 (Smarty_Internal_Template $_smarty_tpl)
 			<?php if ((empty($_smarty_tpl->tpl_vars['UtilisateurConnecte']->value))) {?>
 	  	<li> <a href="?action=login">Connexion</a></li>
 			<?php } else { ?>
-			 <label id="hello">Bonjour <?php echo $_smarty_tpl->tpl_vars['UtilisateurConnecte']->value->nom;?>
-</label>
 			<li> <a href="?action=logout">Deconnexion</a></li>
 			<?php }?>
     </ul>

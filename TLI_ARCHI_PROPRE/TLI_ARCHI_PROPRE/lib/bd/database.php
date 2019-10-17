@@ -1,12 +1,12 @@
 <?php
-	require_once('Models/User.php');
+
 	class BD
 	{
 
 		//RAF créer un user sql pour la recherche/ajout en limitant ces droits
 
 		//mettre le nom de votre base de donnée
-		private $dbName = "acubd";
+		private $dbName = "acu";
 		//donnez le mot de passe de votre bd
 		private $pass = "";
 		//donnez le nom d'utilisateur de la bd (probablement "root") -- > PAS BIEN !!!!!!!!!

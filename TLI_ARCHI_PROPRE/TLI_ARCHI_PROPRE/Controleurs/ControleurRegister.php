@@ -18,8 +18,7 @@ class ControleurRegister
       }
     else
       {
-			return "mots de passe pas identiques";
-			//echo 'mot de passe pas identique';
+        echo 'mot de passe pas identique';
 			 //$smarty->assign("ErrorMessage","Les deux mots de passe ne sont identiques");
       }
   }

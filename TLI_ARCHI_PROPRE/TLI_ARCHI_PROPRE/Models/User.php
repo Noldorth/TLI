@@ -10,8 +10,8 @@ class User
 
   function __construct($mail=null,$password=null,$nom=null,$prenom=null)
   {
-		$this->mail=$mail;
-		$this->password=$password;
+      $this->mail=$mail;
+      $this->password=$password;
 	    $this->nom=$nom;
 	    $this->prenom=$prenom;
   }

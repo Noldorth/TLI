@@ -2,8 +2,8 @@
 
 
 <div class="form_recherche">
-<form method="GET" action="?action=recherche">
-  <label for="id_category">Catégorie :</label>
+<form method="POST" action="?action=recherche">
+  <!--<label for="id_category">Catégorie :</label>
   <select id="id_category">
     <option>...</option>
 
@@ -15,23 +15,26 @@
     <option>...</option>
   </select>
 
-  <div>
-    Type pathologie :
-    <input type="checkbox" name="meridien" value="Méridien">Méridien</input>
-    <input type="checkbox" name="organe" value="Organe/Viscère">Organe/Viscère</input>
-    <input type="checkbox" name="tendino-musculaires" value="Tendino-musculaire">Tendino-musculaire</input>
-    <input type="checkbox" name="branches" value="branches">Branches (voies lu)</input>
-    <input type="checkbox" name="merveilleux" value="merveilleux">Merveilleux vaisceaux</input>
-  </div>
+  -->
 
-  <div><select>
-    <option value="">Volvo</option>
-    <option value="">Saab</option>
-    <option value="">Mercedes</option>
-    <option value="">Audi</option>
-  </select>
-</div>
+  <div>
+    {html_options name=meridien options=$meridiens}
+  
+  </div>
+  <div>
+    {html_options name=typePat options=$typePatho}
+    
+  </div>
+  <div>
+    {html_options name=caracteristique options=$caracteristique}
+    
+  </div>
   <input type="submit" value="Rechercher">
+  <div>
+  <!--{section name=customer loop=$recherche}
+  id: {$recherche[type]}<br />
+{/section}-->
+  </div>
 
 </form>
 </id>

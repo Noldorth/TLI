@@ -11,15 +11,9 @@
 
 	  <p>Pas encore inscrit ? <a href="?action=register"><u>Cliquez ici !</u></a></p>
     </form>
-	{if (!empty($errorMessage))}
-		<div id="error_message">
-		    {$errorMessage}
-		</div>
-		{/if}
-
-
   </div>
-  
+
+
 
 
 
