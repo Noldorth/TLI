@@ -1,6 +1,8 @@
 <?php
 
 require_once('lib/bd/database.php');
+
+// definition de la classe User
 class User
 {
   public $mail ;
@@ -10,6 +12,7 @@ class User
 
   function __construct($mail=null,$password=null,$nom=null,$prenom=null)
   {
+	  // récupération des variables rentrées dans le formulaire d'inscription
 		$this->mail=$mail;
 		$this->password=$password;
 	    $this->nom=$nom;
@@ -18,12 +21,14 @@ class User
 
   function AddUser()
   {
+	  // insertion d'un nouvel utilisateur dans la bdd
     $maBD = new BD();
     $resultat = $maBD->exec("insert into users(mail,password,nom,prenom) values('$this->mail','$this->password','$this->nom','$this->prenom')");
   }
 
   public static function login($email,$password)
   {
+	  // authentification d'un utilisateur. Comparaison du login et du pwd, comparaison.
     $maBD = new BD();
     $passwordHash = $maBD->requete("select password from users where mail='$email'");
     $user=null;
