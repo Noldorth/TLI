@@ -15,6 +15,7 @@
 
   <label for="id_meridien">Méridien :
   <div>
+  <!-- Affichage des variables smarty contenant la liste des méridiens -->
     {html_options name=meridien options=$meridiens} 
   </div>
   </label>
@@ -40,6 +41,7 @@
 <div>
   <h2>Pathologies</h2>
   <ul>
+  <!-- Affichage des variables smarty contenant les descriptions des pathologies -->
   {foreach from=$patho item=item key=key}
       <li class="patho">{$item.idP} : {$item.desc}</li>
   {/foreach}
