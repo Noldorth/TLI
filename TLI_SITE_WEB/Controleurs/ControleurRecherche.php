@@ -40,6 +40,8 @@ class ControleurRecherche
         $recher = recherche::recupererPatho();
         return $recher;
     }*/
+	
+	// Lancement de la fonction modele pour récupérer la liste des pathologies
     public static function affichPatho()
     {
         $patho = patho::getPatho();
