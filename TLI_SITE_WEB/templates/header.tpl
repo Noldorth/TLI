@@ -11,11 +11,15 @@
 
 <body>
 
+<!-- Menu de navigation -->
+
 <nav>
     <ul>
     	<li> <a href="?action=">Accueil</a></li>
 	  	<li> <a href="?action=pathologies">Pathologies</a></li>
     	<li> <a href="?action=sources">Sources</a></li>
+	
+		<!-- Si un user est connecté, on affiche son nom et le bouton "Deconnexion". Sinon, on affiche le bouton "Connexion" -->
 			{if (empty($UtilisateurConnecte))}
 	  	<li> <a href="?action=login">Connexion</a></li>
 			{else}
