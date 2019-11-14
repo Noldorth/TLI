@@ -17,6 +17,8 @@ class recherche
 
     public static function affichageMeridien()
     {
+        // Récupération des noms des méridiens dans la bdd
+        
         $listMeridien = new BD();
         $meridiens = $listMeridien->requete('SELECT Nom from Meridien');
         return $meridiens;
