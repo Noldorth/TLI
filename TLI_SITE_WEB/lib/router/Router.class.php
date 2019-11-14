@@ -15,6 +15,8 @@ class Router
 {
 	private $smarty = null;
 	private $action = "";
+	
+	// Appel des différents templates en fonction de l'action souhaitée
 	const mapTpl = array(
 		"register" => "templates/register.tpl",
 		"login" => "templates/login.tpl",
@@ -38,6 +40,9 @@ class Router
 	{
 		$ret = "templates/defaut.tpl";
 		$error = null;
+		
+		// Appel des controleurs en fonction des actions souhaitées
+		
 		if($this->action!="")
 		{
 			$ret = Router::mapTpl[$this->action];
