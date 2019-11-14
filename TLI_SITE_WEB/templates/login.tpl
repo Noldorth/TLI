@@ -2,6 +2,8 @@
 <div class="form">
 
     <h2>Identification</h2>
+    
+<!-- Formulaire de connexion -->
 
 <form action="?action=logUser" name="login" method="post" accept-charset="utf-8" required autofocus>
 	  <label for="login">Login:
