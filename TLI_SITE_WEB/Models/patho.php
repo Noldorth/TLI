@@ -34,6 +34,7 @@ class patho
 
     public static function affichageMeridien()
     {
+        // récupération des différents méridiens
         $listMeridien = new BD();
         $meridiens = $listMeridien->requete('SELECT Nom from Meridien');
         return $meridiens;
@@ -41,8 +42,8 @@ class patho
 
     public static function getPatho()
     {
+        // Récupération de toutes les entrées de la table patho
       $maBD = new BD();
-      
       $resultat = $maBD->exec("Select * from patho ");
       return $resultat;
     }
